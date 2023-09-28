@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{ 
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+.container {
+    background-image: url('/Imagem/logoBarbearia89.jpg');
+    width: 200px;
+    height: 200px;
+    margin-top:16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    border: 2px solid white;    
+   
+    
+}
+
+    /* border-radius: 50%;
+    border: 2px solid white;*/
+
+
+
