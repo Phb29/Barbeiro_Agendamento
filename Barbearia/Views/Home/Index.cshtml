@@ -1,13 +1,38 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model Cliente
 
 <div class="text-center">
 
+    <div class="container"></div>  
+    <h1 class="textoLogo">Barbearia 89</h1>
+    <div class="identificacaoInput">
+        <h2 class="identificacaoTitulo  ">IDENTIFICAÇÃO</h2>
+        <form asp-action="Create" method="post" onsubmit="redirectToGoogle()">
+            <div style="width:450px;" class="form-group ">
+            <label asp-for="Number">Número:</label>
+                <input asp-for="Number" class="form-control col col-md-6" />
+            <span asp-validation-for="Number" class="text-danger"></span>
+        </div>
 
-   
-
-
-
-   
+            <div style="width:450px;" class="form-group  ">
+            <label asp-for="Message">Mensagem:</label>
+                <input asp-for="Message" class="form-control col col-md-6" />
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+        <div class="VerAgendamento">
+                <a  style="text-decoration:none;color: #fab927;" target="_blank" href="https://www.google.com.br/ "  >Ver/CANCELAR AGENDAMENTO</a>
+        </div>
+            <button asp-route="https://www.google.com.br/" type="submit" class="ButaoEnvio">Enviar</button>
+    </form>
 </div>
+
+    </div>
+    <script>
+    function redirectToGoogle() {
+        window.location.href = "https://www.google.com.br/";
+        // Para evitar que o formulário seja realmente submetido
+    }
+</script>
+
+
+   
+
